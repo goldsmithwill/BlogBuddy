@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="blog.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href="blog.css" />
+<title>BlogBuddy</title>
+</head>
+<body>
+	<h2>BlogBuddy</h2>
+
+	<form name="buttonForm">
+		<select name="font" id="font" onchange="changeFont()">
+			<option value="Courier New">Courier New</option>
+			<!-- 			<option value="Georgia">Georgia</option> -->
+			<option value="Comic Sans MS">Comic Sans MS</option>
+		</select> <input type="color" name="fontColor" id="fontColor"
+			onchange="changeFontColor()"> <input type="number" min="1"
+			name="fontSize" id="fontSize" onchange="changeFontSize()" value="12">
+		<input type="button" name="copy" onclick="copyText()"
+			value="Copy Text"> <input type="button" name="paste"
+			onclick="pasteText()" value="Paste Text">
+	</form>
+
+	<form name="emailForm" method="post" action="email.php">
+		<br> <input type="text" name="postTitle" id="postTitle"
+			placeholder="post title"> <input type="text"
+			name="postCategory" id="posCategory" placeholder="post category">
+		<br>
+		<br>
+		<textarea id="textArea" name="textArea" rows="25" cols="56"></textarea>
+		<h3>Post</h3>
+		<input type="submit" name="post" id="postButton" value="Post">
+		<h3>Share</h3>
+		<input type="text" name="fromEmail" placeholder="your email">
+		<input type="text" name="toEmail" placeholder="their email"> <input
+			type="submit" name="share" id="shareButton" value="Share">
+		<h3>Subscribe</h3>
+		<input type="text" name="subName" id="subscriberName"
+			placeholder="your name"> <input type="text" name="subEmail"
+			placeholder="your email"> <input type="submit"
+			name="subscribe" id="subscribeButton" value="Subscribe">
+
+	</form>
+
+</body>
+</html>
