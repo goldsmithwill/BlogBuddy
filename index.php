@@ -9,20 +9,34 @@
 <title>BlogBuddy</title>
 </head>
 <body>
-	<h2>BlogBuddy</h2>
-	<a href="editor.html">Editor</a>
+	<div id="leftColumn">
+		<img id="logo" src="images/logo.png">
+		<!-- 	<a href="editor.php">Go to editor</a> -->
+	
+			<form name="emailForm" method="post" action="email.php">
+				<input type="text" name="fromEmail" placeholder="your email"> <input
+					type="text" name="toEmail" placeholder="their email"> <input
+					type="submit" name="share" id="shareButton" value="Share"> <br> <br>
+				<input type="text" name="subName" id="subscriberName"
+					placeholder="your name"> <input type="text" name="subEmail"
+					placeholder="your email"> <input type="submit" name="subscribe"
+					id="subscribeButton" value="Subscribe"><input type="submit"
+					name="unsubscribe" id="unsubscribeButton" value="Unsubscribe">
 
-	<form name="emailForm" method="post" action="email.php">
-		<input type="text" name="fromEmail" placeholder="your email">
-		<input type="text" name="toEmail" placeholder="their email"> <input
-			type="submit" name="share" id="shareButton" value="Share"> <br>
-		<br> <input type="text" name="subName" id="subscriberName"
-			placeholder="your name"> <input type="text" name="subEmail"
-			placeholder="your email"> <input type="submit"
-			name="subscribe" id="subscribeButton" value="Subscribe"><input type="submit"
-			name="unsubscribe" id="unsubscribeButton" value="Unsubscribe">
+			</form>
+		
+	</div>
 
-	</form>
+
+	<div id="search">
+		<form name="searchForm" method="post" action="search.php">
+			<input type="text" name="postCategory" id="postCategory"
+				placeholder="post category"> <br> <input type="text"
+				name="postTitle" id="postTitle" placeholder="post title"> <br> <input
+				type="submit" name="search" id="searchButton" value="Search">
+		</form>
+	</div>
+
 
 </body>
 </html>

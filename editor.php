@@ -9,8 +9,13 @@
 <title>BlogBuddy Editor</title>
 </head>
 <body>
+<!-- 	<?php  
+	 	
+	?> -->
+	
+	
 	<h2>BlogBuddy Editor</h2>
-	<a href="index.html">Viewer</a>
+<!-- 	<a href="index.php">Go to viewer</a> -->
 
 	<form name="buttonForm">
 		<select name="font" id="font" onchange="changeFont()">
@@ -28,9 +33,7 @@
 	<form name="emailForm" method="post" action="email.php">
 		<br>
 		<textarea id="textArea" name="textArea" rows="25" cols="56"></textarea>
-		<br>
-		<br>
-		<input type="text" name="postTitle" id="postTitle"
+		<br> <br> <input type="text" name="postTitle" id="postTitle"
 			placeholder="post title"> <input type="text"
 			name="postCategory" id="posCategory" placeholder="post category">
 		<input type="submit" name="post" id="postButton" value="Post">

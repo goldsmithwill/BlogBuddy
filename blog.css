@@ -10,7 +10,39 @@
 	min-height: 500px;
 }
 
+h2 {
+	font-family: impact;
+	font-size: 40pt;
+	padding-left: 20px;
+}
+
 body {
-	margin: 0px;
+	margin: 10px;
+	background: #74cb8a;
+	font-family: "Palatino Linotype";
+	color: #042b00;
+}
+
+input, select, textarea {
+	background: #d8f4de;
+}
+
+#leftColumn {
+	float: left;
+	/* width: 70%; */
+	padding: 5px;
+	/* padding-top: 5px; */
+	background: #b1ffb8;
+	border: 5px ridge #59ae6b;
+	height: 100%;
+}
+
+#search {
+	float: right;
 	padding: 15px;
+	background: #b1ffb8;
+	/* #d7e8fd; */
+	/* #b1ffb8 */
+	border: 5px ridge #59ae6b;
+	height: 100%;
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2>BlogBuddy</h2>
-
+<a href="index.php"></a>
 <?php
 $dom = new DOMDocument ();
 $title = $_POST ['postTitle'];
@@ -24,8 +24,9 @@ $content = $row ['content'];
 echo ($content);
 
 mysqli_close ( $dbc );
-// $dom->getElementsByTagName('textarea');
 ?>
+
+
 
 </body>
 </html>
