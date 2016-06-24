@@ -8,13 +8,13 @@
 </head>
 <body>
 	<h2>BlogBuddy</h2>
-<a href="index.php"></a>
+	<a href="index.php"></a>
 <?php
 $dom = new DOMDocument ();
 $title = $_POST ['postTitle'];
 $category = $_POST ['postCategory'];
 $dbc = mysqli_connect ( 'localhost', 'root', '', 'blogbuddy' ) or die ( 'Error connecting to MySQL server.' );
-$query = "SELECT content FROM posts WHERE category='$category' AND title='$title'";
+$query = "SELECT content FROM posts WHERE title='$title'";
 
 $result = mysqli_query ( $dbc, $query ) or die ( 'QUERY Error' );
 
@@ -25,8 +25,6 @@ echo ($content);
 
 mysqli_close ( $dbc );
 ?>
-
-
 
 </body>
 </html>

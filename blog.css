@@ -23,8 +23,13 @@ body {
 	color: #042b00;
 }
 
-input, select, textarea {
+input, select, textarea, article {
 	background: #d8f4de;
+}
+
+article {
+	padding: 5px;
+	border: 5px ridge #7bcd88;
 }
 
 #leftColumn {
@@ -37,6 +42,15 @@ input, select, textarea {
 	height: 100%;
 }
 
+#stream {
+	float: left;
+	padding: 5px;
+	background: #b1ffb8;
+	border: 5px ridge #59ae6b;
+	height: 100%;
+	margin: auto
+}
+
 #search {
 	float: right;
 	padding: 15px;
@@ -45,4 +59,9 @@ input, select, textarea {
 	/* #b1ffb8 */
 	border: 5px ridge #59ae6b;
 	height: 100%;
+}
+
+#logo {
+	display: block;
+	margin: auto;
 }

@@ -40,7 +40,7 @@ if (isset ( $_POST ['post'] )) {
 		}
 		
 		// echo (time ());
-		$query = "INSERT INTO posts VALUES(CURRENT_TIMESTAMP, '$category', '$title', '$text')";
+		$query = "INSERT INTO posts VALUES(0, CURRENT_TIMESTAMP, '$category', '$title', '$text')";
 		$result = mysqli_query ( $dbc, $query ) or die ( 'QUERY Error' );
 	}
 } else if (isset ( $_POST ['share'] )) {

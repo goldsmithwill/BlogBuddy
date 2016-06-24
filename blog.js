@@ -30,14 +30,14 @@ function copyText() {
 	localStorage.setItem("text", document.getElementById("textArea").value);
 	localStorage.setItem("size", document.getElementById("fontSize").value);
 	localStorage.setItem("color", document.getElementById("fontColor").value);
-	localStorage.setItem("font",
-			document.getElementById("font").value);
+	localStorage.setItem("font", document.getElementById("font").value);
 }
 
 function pasteText() {
 	document.getElementById("textArea").value = localStorage.getItem("text");
 	document.getElementById("textArea").style.fontSize = localStorage
-			.getItem("size") + "pt";
+			.getItem("size")
+			+ "pt";
 	document.getElementById("textArea").style.color = localStorage
 			.getItem("color");
 	document.getElementById("textArea").style.fontFamily = localStorage
@@ -45,4 +45,12 @@ function pasteText() {
 	document.getElementById("fontSize").value = localStorage.getItem("size");
 	document.getElementById("fontColor").value = localStorage.getItem("color");
 	document.getElementById("font").value = localStorage.getItem("font");
+}
+
+function deleteArticles() {
+	var articles = document.getElementsByTagName("article");
+
+	for (i = articles.length - 1; i >= 0; i--) {
+		articles[i].parentNode.removeChild(articles[i]);
+	}
 }
