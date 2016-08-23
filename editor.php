@@ -35,8 +35,9 @@
 			onclick="pasteText()" value="Paste Text">
 	</form>
 
-	<!-- email form -->
-	<form name="emailForm" method="post" action="email.php">
+	<!-- post form -->
+	<form name="postForm" enctype="multipart/form-data" method="post"
+		action="email.php">
 		<br>
 
 		<!-- editor textarea -->
@@ -47,6 +48,10 @@
 		<input type="text" name="postTitle" id="postTitle"
 			placeholder="post title"> <input type="text" name="postCategory"
 			id="posCategory" placeholder="post category">
+
+		<!-- image attachment file input -->
+		<input type="file" id="image" name="image" />
+
 
 		<!-- post submit button -->
 		<input type="submit" name="post" id="postButton" value="Post">
