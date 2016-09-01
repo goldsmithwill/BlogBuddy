@@ -21,7 +21,7 @@ $text;
 $subject;
 
 // max file size and upload path variables
-$upload_path = "/Applications/XAMPP/xamppfiles/htdocs/BlogBuddy/images/postPics/";
+$upload_path = "/images/postPics/";
 $max_file_size = 32768;
 
 if (isset ( $_POST ['post'] )) {
@@ -42,9 +42,12 @@ if (isset ( $_POST ['post'] )) {
 				// if the image type and size are within the restrictions
 				if ($_FILES ['image'] ['error'] == 0) {
 					// Move the file to the target upload folder
-					$target = $upload_path . $image;
-					echo 'TARGET: ' . $target;
-					if (move_uploaded_file ( $_FILES ['image'] ['tmp_name'], $target )) {
+					$uploadfile = tempnam ( sys_get_temp_dir (), sha1 ( $image ) );
+					
+					echo 'upload file: ' . $uploadfile;
+					echo 'image tempname: ' . $_FILES ['image'] ['tmp_name'];
+					// var_dump ( $_FILES );
+					if (move_uploaded_file ( $_FILES ['image'] ['tmp_name'], $uploadfile )) {
 						
 						// Confirm success with the user
 						echo 'success';
