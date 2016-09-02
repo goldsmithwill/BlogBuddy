@@ -7,7 +7,11 @@
 <title>BlogBuddy Editor</title>
 </head>
 <body>
-<?php ?>
+<?php
+//making sure that only admin can access this pagess
+require_once ('authorize.php');
+?>
+	
 
 	<h2>BlogBuddy Editor</h2>
 
